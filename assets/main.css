@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn{
+    color: var(--mainColor);
+}
+:root{
+    --mainColor: #efd500;
+    --mainFont: "Radley", serif;
+    --subColor:#3d3e46 ;
+    --subFont: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+body{
+    background: linear-gradient(150deg,rgba(177, 171, 178, 1) 0%, rgba(56, 56, 56, 1) 50%, rgba(177, 171, 178, 1) 100%);
+}
+.mainColor{
+    color: var(--mainColor);
+}
+.subColor{
+    color: var(--subColor);
+}
+.mainFont{
+    font-family: var(--mainFont);
+}
+.subFont{
+    font-family: var(--subFont);
+}
+.costume-btn{
+    background-color: var(--mainColor);
+    padding: 5px ;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+/* startup-start */ 
+ .startup-bg{ 
+     background-image: url(./img/public/logo.webp); 
+     width:auto;
+     height: 100vh;
+     background-position: -50px -90px;
+ } 
+.startup{
+    height: 100vh;
+}
+.startup .startup-content{
+    width: fit-content;
+    position: absolute;
+    top:70px;
+    left:50px;
+    border-radius: 4px;
+    color: #fff;
+    position: absolute;
+    padding: 9px 7px;
+}
+.startup a{
+    color: var(--subColor);
+}
+.startup button{
+    background-color: var(--mainColor);
+}
+.startup button:hover{
+    background-color: var(--subColor);
+    transform: scale(1.1);
+}
+.startup button:hover a{
+    color: var(--mainColor);
+   
+}
+/* starup end */
+/* Login Page */
+.register-background{
+    background-image: url(./img/public/logo.webp);
+    height: 100vh;
+    background-size: cover;
+    background-position: 0px -100px;
+    filter: blur(11px);
+}
+.register-card{
+    background: linear-gradient(90deg,rgba(115, 115, 70, 1) 0%, rgba(163, 144, 0, 1) 50%, rgba(217, 191, 0, 1) 100%);
+    position: absolute;
+    top: 16%;
+    left: 34%;
+    z-index: 2;
+    padding: 50px;
+    
+    box-shadow:  0px 0px 2px 2px var(--mainColor);
+}
+.sign-card{
+    top: 12%;
+    left: 35%;
+}
+.sign-form ::placeholder{
+    color: #fff;
+}
+/* Login PAge End */
+/* Navbar Section Start */
+.navbar{
+    background: linear-gradient(90deg,rgba(240, 240, 153, 1) 0%, rgba(247, 224, 47, 1) 50%, rgba(239, 213, 0, 1) 100%);
+    box-shadow: 0 5px 10px var(--mainColor);
+}
+.navbar .nav-link:hover{
+     transform: rotate3d(1, 2, 3, 10deg);
+}
+.nav-item{
+    font-family: var(--mainFont);
+    font-weight: 700;
+}
+.search-btn{
+    font-family: var(--mainFont);
+}
+.dropdown-menu{
+    min-width: 0;
+}
+/* Navbar Section End */
+/* Header Section Start */
+.header{
+    background-image:url(./img/public/logo.webp);
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+.header h2{
+    font-family: var(--mainFont);
+    font-weight: 700;
+    font-size: 100px;
+    text-shadow: 2px 2px #efd500;
+}
+/* Header Section End */
+
+/* Quote Section Start */
+.quote-section{
+    position: relative;
+    z-index: 1;
+    animation-name: quote;
+    animation-duration: 4s;
+}
+.quote-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./gym.jpg);
+  background-size: cover;
+   opacity: 0.5; 
+  z-index: -1;
+}
+.quote-text-1{
+    font-style: italic;
+    font-size: 70px;
+    text-shadow: 1px 1px var(--mainColor);
+    animation-name: transformLeft;
+    animation-duration: 4s;
+    
+}
+@keyframes transformLeft{
+    from{
+        transform:translateX(-100%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
+.quote-text-2{
+    font-style: italic;
+    font-size: 70px;
+    text-shadow: 1px 1px var(--mainColor);
+    animation-name: transformRight;
+    animation-duration: 4s;
+    
+}
+@keyframes transformRight{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
+/* Quote Section End */
+
+/* Who We Are Section Start */
+.WhoWeAre-section{
+    position: relative;
+    z-index: 1;
+}
+.WhoWeAre-section::before{
+   content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./b91d44ba738c158889c9f1a47c75ec74-removebg-preview.png);
+  /* background-size:contain; */
+  /* background-position: 0 -90px; */
+  background-repeat: 9;
+    /* opacity: 0.5;   */
+   /* filter: blur(7px); */
+  z-index: -1;
+}
+.who-we-are-wrapper {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.who-we-are-heading {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--mainColor);
+    text-shadow: 1px 1px #fff;
+}
+.behind-title{
+    position: absolute;
+    left: 0%;
+    top: -25%;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+    color: rgba(207, 207, 205, 0.121);
+    font-size: 105px;
+    line-height: 70%;
+    text-align: center;
+    text-decoration:underline;
+}
+.who-we-are-content p{
+    background-color: #efd30048;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* Who We Are Section End */
+
+/* Gallery Section Start */
+
+
+
+.gallery-wrapper {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.gallery-heading {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--mainColor);
+    text-shadow: 1px 1px #fff;
+}
+.behind-title{
+    position: absolute;
+    left: 0%;
+    top: -25%;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+    color: rgba(207, 207, 205, 0.121);
+    font-size: 105px;
+    line-height: 70%;
+    text-align: center;
+    text-decoration:underline;
+}
+/* Gallery Section End */
+
+/* Classes Section End */
+.Classes h2{
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #fff;
+}
+.Classes .card{
+    border: 1px solid var(--mainColor);
+    box-shadow: -2px 2px 3px var(--mainColor);
+}
+.Classes .card-body{
+   background: linear-gradient(150deg,rgba(239, 213, 0, 1) 0%, rgba(56, 56, 56, 1) 50%, rgba(177, 171, 178, 1) 100%);
+}
+.Class button:hover {
+    color: var(--mainColor);
+}
+.Classes a:hover{
+    color: var(--mainColor);
+}
+
+@media screen and (min-width: 760px) {
+    .Classes .card{
+        width: calc((100% - 32px) / 3)
+    }
+}
+@media screen and (max-width: 576px) {
+    .Classes .card{
+        width: 100%;
+    }
+}
+/* Classes Section End */
+/* Programs Section Start */
+.programs h2{
+     font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #fff;
+}
+.programs .card{
+    box-shadow: -2px 2px 3px var(--mainColor);
+}
+
+
+/* Programs Section End  */
+/* Membership Section Start */
+.Mempership h2{
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px #fff;
+}
+.Mempership .card-body{
+    background: linear-gradient(150deg,rgba(177, 171, 178, 1) 0%, rgba(56, 56, 56, 1) 50%, rgba(177, 171, 178, 1) 100%);
+    border-radius: 5px;
+    box-shadow: -2px 2px 3px var(--subColor);
+}
+.Mempership .offers-card-body{
+    background: linear-gradient(150deg,rgba(239, 213, 0, 1) 0%, rgba(130, 115, 0, 1) 50%, rgba(255, 235, 84, 1) 100%);
+    border-radius: 5px;
+    box-shadow: -2px 2px 3px var(--subColor);
+}
+.Mempership .card-title{
+    text-shadow: 1px 1px var(--subColor);
+}
+.carousel-indicators [data-bs-target]{
+    background-color: var(--mainColor);
+    border-radius: 11px;
+
+}
+.Mempership .offes-title{
+    text-shadow: 1px 1px var(--mainColor);
+    padding-bottom: 30px;
+}
+.Mempership li{
+    text-shadow: 1px 1px var(--subColor);
+}
+.offers-description{
+    padding-top: 24px;
+}
+.offers-description p{
+    text-shadow: 1px 1px var(--subColor);
+}
+.offers-btn{
+    background-color: var(--subColor);
+    padding: 5px ;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.Mempership a:hover{
+    color: var(--mainColor);
+}
+.Mempership button:hover a{
+    color: var(--mainColor);
+}
+.Mempership button:hover {
+    background-color: var(--subColor);
+}
+/* Membership Section End */
+
+/* Footer Start */
+.footer{
+    height: 200px;
+    background-color: var(--mainColor);
+}
+.footer address{
+    font-style: oblique;
+}
+.right-side a:hover{
+    color: #fff;
+}
+.left-side button{
+    height:55px;
+}
+.left-side button:hover{
+    color: #fff;
+}
+/* Footer Start */
