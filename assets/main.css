@@ -12,13 +12,14 @@ a{
 }
 :root{
     --mainColor: #efd500;
-    --mainFont: "Radley", serif;
-    --subColor:#3d3e46 ;
+    --mainFont: "Patrick Hand", cursive;
+    --subColor: #87016C;
+    --subColor1: #3d3e46;
     --subColor2: #5c5b4d;
-    --subFont: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --subFont: "Courgette", cursive;
 }
 body{
-    background: linear-gradient(150deg,rgba(177, 171, 178, 1) 0%, rgba(56, 56, 56, 1) 50%, rgba(177, 171, 178, 1) 100%);
+     background: linear-gradient(150deg,rgba(177, 171, 178, 1) 0%, rgba(56, 56, 56, 1) 50%, rgba(177, 171, 178, 1) 100%); 
     overflow-x: hidden;
 }
 .mainColor{
@@ -61,13 +62,13 @@ body{
     padding: 9px 7px;
 }
 .startup a{
-    color: var(--subColor);
+    color: var(--subColor1);
 }
 .startup button{
     background-color: var(--mainColor);
 }
 .startup button:hover{
-    background-color: var(--subColor);
+    background-color: var(--subColor1);
     transform: scale(1.1);
 }
 .startup button:hover a{
@@ -88,27 +89,53 @@ body{
     position: absolute;
     top: 16%;
     left: 34%;
-    z-index: 2;
+    z-index: 2; 
     padding: 50px;
     box-shadow:  0px 0px 2px 2px var(--mainColor);
 }
-@media screen and (max-width:900px){
-    .sign-card{
-         top: 16%;
-         left: 14%;
+@media screen and (max-width:1200px){
+    .register-card{
+    position: absolute;
+    top: 5%;
+    left: 33%;
+    padding: 20px;
     }
 }
-.sign-card{
-    top: 12%;
-    left: 35%;
+@media screen and (max-width:1050px){
+    .register-card{
+    position: absolute;
+    top: 5%;
+    left: 29%;
+    padding: 20px;
+    }
 }
+@media screen and (max-width:900px){
+    .register-card{
+    position: absolute;
+    top: 0%;
+    left: 21%;
+    padding: 20px;
+    }
+}
+@media screen and (max-width:646px){
+    .register-card{
+    position: absolute;
+     top: 0%;
+    left: 0%;
+    padding: 20px;
+    width: 100%;
+    }
+}
+
 .sign-form ::placeholder{
     color: #fff;
 }
 /* Login PAge End */
 /* Navbar Section Start */
 .navbar{
-    background: linear-gradient(90deg,rgba(240, 240, 153, 1) 0%, rgba(247, 224, 47, 1) 50%, rgba(239, 213, 0, 1) 100%);
+    /* background: linear-gradient(90deg,rgba(240, 240, 153, 1) 0%, rgba(247, 224, 47, 1) 50%, rgba(239, 213, 0, 1) 100%); */
+    /* background: linear-gradient(150deg,rgba(242, 153, 0, 1) 0%, rgba(255, 194, 89, 1) 50%, rgba(239, 213, 0, 1) 100%); */
+    background: linear-gradient(150deg,rgba(135, 1, 108, 1) 0%, rgba(255, 194, 89, 1) 65%, rgba(239, 213, 0, 1) 100%);    
     box-shadow: 0 5px 10px var(--mainColor);
 }
 .navbar .nav-link:hover{
@@ -132,7 +159,7 @@ body{
     background-position: center; 
     background-attachment: fixed; 
 }
-.header h2{
+.header h1{
     font-family: var(--mainFont);
     font-weight: 700;
     font-size: 100px;
@@ -147,25 +174,14 @@ body{
     animation-name: quote;
     animation-duration: 4s;
 }
-.quote-section::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(./gym.jpg);
-  background-size: cover;
-   opacity: 0.5; 
-  z-index: -1;
-}
+
 .quote-text-1{
     font-style: italic;
     font-size: 70px;
-    text-shadow: 1px 1px var(--mainColor);
+    text-shadow: 2px 2px var(--mainColor);
     animation-name: transformLeft;
     animation-duration: 4s;
-    
+    filter: drop-shadow(2px 2px var(--subColor));
 }
 @keyframes transformLeft{
     from{
@@ -178,9 +194,10 @@ body{
 .quote-text-2{
     font-style: italic;
     font-size: 70px;
-    text-shadow: 1px 1px var(--mainColor);
+    text-shadow: 2px 2px var(--mainColor);
     animation-name: transformRight;
     animation-duration: 4s;
+    filter: drop-shadow(2px 2px var(--subColor));
     
 }
 @keyframes transformRight{
@@ -196,28 +213,33 @@ body{
 /* Who We Are Section Start */
 .WhoWeAre-section{
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+.WhoWeAre-section .row{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 9px;
 }
 .WhoWeAre-section::before{
    content: ""; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(./b91d44ba738c158889c9f1a47c75ec74-removebg-preview.png);
-  /* background-size:contain; */
-  /* background-position: 0 -90px; */
-  background-repeat: 9;
-    /* opacity: 0.5;   */
-   /* filter: blur(7px); */
-  z-index: -1;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(./img/public/nobg1.svg);
+   z-index: -2;
 }
-.who-we-are-wrapper {
+.WhoWeAre-section-content{
+    border-radius: 9px;
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px); 
+}
+ .who-we-are-wrapper {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-}
+} 
 .who-we-are-heading {
     display: block;
     margin-bottom: 40px;
@@ -225,33 +247,47 @@ body{
     text-align: center;
     letter-spacing: 2px;
     color: var(--mainColor);
-    text-shadow: 1px 1px #fff;
+    text-shadow: 2px 2px #fff;
+    filter: drop-shadow(1px 1px var(--subColor1));
 }
-.behind-title{
+ .behind-title{
     position: absolute;
     left: 0%;
     top: -25%;
     right: 0%;
     bottom: 0%;
     z-index: -1;
-    color: rgba(207, 207, 205, 0.121);
+    color: rgb(78 78 78 / 12%);
+    text-shadow: 1px 1px #3d3e4618;
     font-size: 105px;
     line-height: 70%;
     text-align: center;
-    text-decoration:underline;
-}
+    text-decoration: underline;
+    filter: drop-shadow(1px 1px var(--subColor1));
+} 
 .who-we-are-content p{
-    background-color: #efd30048;
-    border-radius: 4px;
-    margin-bottom: 25px;
+    color: var(--subColor1);
+    filter: drop-shadow(1px 1px var(--subColor1));
+    
+}
+.who-we-are-img{
+    height: 100%;
 }
 
 /* Who We Are Section End */
 
 /* Gallery Section Start */
-
-
-
+.gallery::before{
+   content: ""; 
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(./nobg.png);
+   background-repeat: repeat;
+   z-index: -2;
+}
 .gallery-wrapper {
   position: relative;
   margin-right: auto;
@@ -265,6 +301,7 @@ body{
     letter-spacing: 2px;
     color: var(--mainColor);
     text-shadow: 1px 1px #fff;
+    filter: drop-shadow(1px 1px var(--subColor1));
 }
 .behind-title{
     position: absolute;
@@ -297,7 +334,7 @@ body{
 
 .Classes a:hover{
     color: var(--mainColor);
-    background-color: #5c5b4d;
+    background-color: var(--subColor);
 }
 
 @media screen and (min-width: 760px) {
@@ -318,11 +355,15 @@ body{
     text-shadow: 1px 1px #fff;
 }
 .programs .card{
-    box-shadow: -2px 2px 3px var(--mainColor);
+    box-shadow: -3px 3px 2px var(--subColor);
+}
+.programs a{
+    background-color: var(--subColor);
+    color: #fff;
 }
 .programs a:hover{
-    color: var(--mainColor);
-    background-color: var(--subColor2);
+    color: var(--subColor);
+    background-color: var(--mainColor);
 }
 
 /* Programs Section End  */
@@ -335,15 +376,15 @@ body{
 .Mempership .card-body{
     background: linear-gradient(150deg,rgba(177, 171, 178, 1) 0%, rgba(56, 56, 56, 1) 50%, rgba(177, 171, 178, 1) 100%);
     border-radius: 5px;
-    box-shadow: -2px 2px 3px var(--subColor);
+    box-shadow: -2px 2px 3px var(--subColor1);
 }
 .Mempership .offers-card-body{
     background: linear-gradient(150deg,rgba(239, 213, 0, 1) 0%, rgba(130, 115, 0, 1) 50%, rgba(255, 235, 84, 1) 100%);
     border-radius: 5px;
-    box-shadow: -2px 2px 3px var(--subColor);
+    box-shadow: -2px 2px 3px var(--subColor1);
 }
 .Mempership .card-title{
-    text-shadow: 1px 1px var(--subColor);
+    text-shadow: 1px 1px var(--subColor1);
 }
 .carousel-indicators [data-bs-target]{
     background-color: var(--mainColor);
@@ -352,19 +393,20 @@ body{
 }
 .Mempership .offes-title{
     text-shadow: 1px 1px var(--mainColor);
+    color: var(--subColor1);
     padding-bottom: 30px;
 }
 .Mempership li{
-    text-shadow: 1px 1px var(--subColor);
+    text-shadow: 1px 1px var(--subColor1);
 }
 .offers-description{
     padding-top: 24px;
 }
 .offers-description p{
-    text-shadow: 1px 1px var(--subColor);
+    text-shadow: 1px 1px var(--subColor1);
 }
 .offers-btn{
-    background-color: var(--subColor);
+    background-color: var(--subColor1);
     padding: 5px ;
     border-radius: 5px;
     border: none;
@@ -378,13 +420,13 @@ body{
     color: var(--mainColor);
 }
 .Mempership button:hover {
-    background-color: var(--subColor);
+    background-color: var(--subColor1);
 }
 .Mempership .arrow-btn:hover{
     background-color: transparent;
 }
 .Mempership .offers-btn:hover{
-    color: var(--subColor);
+    color: var(--subColor1);
     background-color: #fff;
 }
 /* Membership Section End */
